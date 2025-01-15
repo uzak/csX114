@@ -8,7 +8,7 @@ Title: 02 Python and Data
 ## Recap
 
 * Interactive Mode
-* Scripts
+* Scripts - files with .py extension
 * Syntax and structure
   - Syntax: rules, how code must be written.
   - Semantics: Meaning of a statement or instruction.
@@ -26,7 +26,7 @@ x = 10       # Integer
 y = "Hello"  # String
 z = 3.14     # Float
 
-x = "Now I'm a string!"     # Reasignment
+x = "Now I'm a string!"     # Reassignment
 ```
 
 Rules for Variable Names:
@@ -38,7 +38,7 @@ Rules for Variable Names:
 
 ### Snake Case
 
-Snake case is a naming convention where words are written in lowercase and separated by underscores (`_`). It is commonly used in Python for variable and function names to improve readability.
+Snake case is a naming convention where words are written in lowercase and separated by underscores (`_`). It is commonly used in Python for variable and function names to improve readability. E.g. `valid_name`.
 
 ## Comments
 
@@ -51,13 +51,10 @@ text = "# This is not a comment because it's inside quotes."
 
 ## Statements and Expressions
 
-* Statement is a command. Does something, but not necessarily return a value.
-* Expression is a combination of values, variables, operators, funtion calls that evaluates to a value
+* Statement is a command. It does something, but not necessarily return a value.
+* Expression is a combination of values, variables, operators, funtion calls that evaluates to a value.
 
 ```
-# Variable assignment (statement)
-x = 10
-
 # Print statement
 print("Hello, World!")
 
@@ -78,18 +75,18 @@ len("Python")  # Evaluates to 6
 "Hello" + " World"  # Evaluates to "Hello World"
 ```
 
-You can execute several statements in one line (and expressions). Don't do that! Stick to one idea/task/expression per line.
+You can execute several statements (expressions) in one line. Don't do that! Stick to one idea/task/expression per line. That way it will be easier to understand.
 
 # Data
 
-Data refers to information or values that a computer program
-processes, stores, or manipulates. It can be as simple as a single
-number or as complex as a collection of multimedia files. In
-programming, data is categorized into **data types**, which define the kind of value and what operations can be performed on it.
+Data refers to information or values that a computer program processes, stores, or manipulates. It can be as simple as a single number or as complex as a collection of multimedia files. In programming, data is categorized into **data types**, which define the kind of value and what operations can be performed on it.
 
-An operator is a symbol or keyword in programming that performs an
-action or operation on data (called operands). For example, + is an
-operator that adds two numbers.
+Kinds of data types:
+  * **Primitive**: Basic, indivisible data types like integers, floats, and booleans.
+  * **Structured**: Organized collections of data, like arrays, lists, and objects.
+
+Hand in hand with data types go operators. An operator is a symbol or keyword in programming that performs an action or operation on data (called operands). For example, + is an operator that adds two numbers.
+
 
 ## Numeric
 
@@ -109,11 +106,11 @@ operator that adds two numbers.
 <class 'float'>
 
 >>> # Perform basic arithmetic operations
->>> x + y  # Addition
+>>> x + y 
 45.14
->>> x - y  # Subtraction
+>>> x - y
 38.86
->>> x * y  # Multiplication
+>>> x * y 
 131.88
 >>> x / y  # Division (always returns float)
 13.375796178343949
@@ -122,14 +119,14 @@ operator that adds two numbers.
 >>> x // 5  # Integer division
 8
 >>> x % 5  # Remainder
-Create a program that will read three numbers and sum them. Then it will print the result and it&#x2019;s type (which should be one of the numeric).2
+2
 
 >>> # Exponentiation
 >>> 2 ** 3  # 2 raised to the power of 3
 8
 
 >>> # Working with floats
->>> z = 7.5 / 2  # Division with a float result
+>>> z = 7.5 / 2 
 >>> z
 3.75
 
@@ -137,7 +134,7 @@ Create a program that will read three numbers and sum them. Then it will print t
 >>> round(z, 1)  # Round to 1 decimal place
 3.8
 
->>> # Type conversions
+>>> # Type conversions (casting)
 >>> int(z)  # Convert float to integer (truncates)
 3
 >>> float(x)  # Convert integer to float
@@ -163,6 +160,7 @@ Create a program that will read three numbers and sum them. Then it will print t
 ## Text
 
 * String: str
+* Existing strings cannot be changed. You can only use them to create new strings out of the existing ones.
 
 ```
 >>> # Let's start with basic strings
@@ -218,7 +216,7 @@ Create a program that will read three numbers and sum them. Then it will print t
 
 >>> # Splitting strings
 >>> sentence = "Python is awesome"
->>> words = sentence.split()  # Split into a list of words
+>>> words = sentence.split()  # Split into a list of words (we'll deal with lists later)
 >>> words
 ['Python', 'is', 'awesome']
 
@@ -236,39 +234,68 @@ False
 >>> sentence.replace("awesome", "fantastic")
 'Python is fantastic'
 
->>> # Formatting strings
+>>> # Formatting strings - string interpolatoin
 >>> age = 25
 >>> formatted = f"My name is {name} and I am {age} years old."
 >>> formatted
 'My name is Alice and I am 25 years old.'
 
->>> # Advanced formatting
+>>> # Advanced formatting (see: https://pyformat.info/)
 >>> pi = 3.14159
 >>> f"The value of pi is approximately {pi:.2f}"  # Format to 2 decimal places
 'The value of pi is approximately 3.14'
+```
+
+* Strings are texts in quotes (`"`) or apostrophes (`'`) on one line.
+* Multiline strings begin and end with triple quotes or apostrophes. E.g.:
+```
+>>> long_text = """Line 1
+... Line 2
+... ...
+... and here is the END"""
+>>> long_text
+'Line 1\nLine 2\n...\nand here is the END'
+>>> 
+```
+* `\n` is new line character.
+* All characters starting with `\` are called [escape sequences](https://en.wikipedia.org/wiki/Escape_sequence) and contain special characters.
+
+`input()` always returns a string, even if the user enter digits. It's your job to convert it to number. Example:
+
+```
+>>> number = input("Please enter a number: ")
+Please enter a number: 42
+>>> number
+'42'
+>>> type(number)
+<class 'str'>
+>>> number = int(number)
+>>> type(number)
+<class 'int'>
+>>> number
+42
 ```
 
 ## Boolean
 
 * Boolean: bool
 * Valid values are `True` and `False`. Comparisons yield these values.
-*
 
 ```
 >>> # Booleans represent True or False
->>> a = True
->>> b = False
+>>> t = True
+>>> f = False
 
 >>> # Check the type of a boolean
->>> type(a)
+>>> type(t)
 <class 'bool'>
 
 >>> # Boolean operations
->>> a and b  # Logical AND
+>>> t and f  # Logical AND
 False
->>> a or b  # Logical OR
+>>> t or f  # Logical OR
 True
->>> not a  # Logical NOT
+>>> not t  # Logical NOT
 False
 
 >>> # Booleans with comparison operators
@@ -295,7 +322,7 @@ False
 >>> False + 1  # False is treated as 0
 1
 
->>> # Boolean casting
+>>> # Boolean casting 
 >>> bool(1)  # Non-zero numbers are True
 True
 >>> bool(0)  # Zero is False
@@ -309,27 +336,12 @@ False
 >>> bool([1, 2, 3])  # Non-empty lists are True
 True
 
->>> # Practical examples
->>> is_adult = 18 >= 18  # Comparison to check if someone is an adult
+>>> age = 19
+>>> is_adult = age >= 18    # expression + assignment
 >>> is_adult
 True
 ```
 
-`input()` always returns a string, even if the user enter digits. It's your job to convert it to number. Example:
-
-```
->>> number = input("Please enter a number: ")
-Please enter a number: 42
->>> number
-'42'
->>> type(number)
-<class 'str'>
->>> number = int(number)
->>> type(number)
-<class 'int'>
->>> number
-42
-```
 
 ## None
 
@@ -346,6 +358,10 @@ False
 
 ## Homework (graded)
 
-Create a program that will read three numbers, store them in three
-distinct variables and then sum them. Then it will print the result and
-it's type (which should be one of the numeric).
+### Calculator
+Create a program that will read three numbers, store them in three distinct variables and then create the sum of them. This will be stored in another variable. Then it will print the variable result saying: "result is N" where N is the sum.
+
+### Meter
+Create a program that will let the user input his name. The program will then say how many characters are there in his name.
+
+Extra points: if spaces are inserted, substract their count from the result, so that "Peter Pan" will return 8 and not 9.

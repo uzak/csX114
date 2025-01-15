@@ -57,16 +57,15 @@ uses plain language and basic programming constructs without worrying
 about syntax. It bridges the gap between human thinking and actual code.
 Example of Pseudocode:
 
-Task: Find the largest number in a list.
-
 ```
-(1. Start)
-2. Initialize a variable Max to the first element of the list.
-3. For each element in the list:
+Task: Find the largest number in a list.
+Input: list of numbers
+
+1. Initialize a variable Max to the first element of the list.
+2. For each element in the list:
     a. If the element is greater than Max:
         i. Set Max to this element.
-4. Output Max.
-(5. End)
+3. Output: Max.
 ```
 
 ## Advantages of Using Pseudocode
@@ -77,6 +76,10 @@ Task: Find the largest number in a list.
 
 ## MSI
 
-* Manually
-* Step-by-Step
-* Impelement
+* **M**anually. Always solve the problem manually first (ideally on paper).
+* **S**tep-by-Step. Then design the algorithm. What are the steps that need to be taken?
+* **I**mpelement. Proceed to implement the algorithm in a programming language.
+
+## Homework (graded)
+
+Given a string. Return two numbers (tuple), the first will represent the number of spaces in the string, the other of non-spaces. Your task is pass the M. and S. steps on paper and only then to implement the algorithm in Python. Both the paper and the script are required.

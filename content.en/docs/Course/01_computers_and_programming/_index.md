@@ -118,8 +118,8 @@ Programming languages are the medium for humans to write programs that a compute
 
 #### Low-Level Languages
 
-*   Machine Language: Example: `10110000 01100001`
-*   Assembly langauage: symbolic representation of machine language using mnemonics. Example:
+*  **Machine Language**: Example: `10110000 01100001`
+*  **Assembly langauage**: symbolic representation of machine language using mnemonics. Example:
 
 ```
 MOV A, 5
@@ -130,15 +130,15 @@ ADD B, A
 
 Designed to be easier to read and write, closer to human languages. Requires a compiler or interpreter (or both) to translate into machine code. Examples:
 
-*   C: very low-level and thus performant. Compiled. Non-portable.
-*   Java: First compiled. Then resulting code is interpreted in the Java Virtual Machine. Cross-platform. Popular for enterprise apps.
-*   JavaScript: Very high level. Leans closer to C-style syntax. Used in browsers to create Frontends.
-*   Python: Very high level, easy to read, beginner friendly. Cross-platform. Popular for data-science (AI), prototyping and scripting.
+*   **C**: very low-level and thus performant. Compiled. Non-portable.
+*   **Java**: First compiled. Then resulting code is interpreted in the Java Virtual Machine. Cross-platform. Popular for enterprise apps.
+*   **JavaScript**: Very high level. Leans closer to C-style syntax. Used in browsers to create Frontends.
+*   **Python**: Very high level, easy to read, beginner friendly. Cross-platform. Popular for data-science (AI), prototyping and scripting.
 
 High level scripting languages are used for automating tasks. Examples:
 
-*   Python
-*   Bash
+*  **Python**
+*  **Bash**
 
 ### Compiled vs. Interpreted
 
@@ -163,14 +163,14 @@ print("Hello")
 
 ### Categories of High-Level Languages
 
-*   Procedural: focus on a sequence of steps to solve a problem. Example: C.
-*   Object-Oriented: model entities of outside worlds as objects encapsulating data and behavior. Example: Java, C++.
-*   Functional: focus on mathematical functions. Example: Haskell.
-*   Logical: express facts and rules for reasoning. Example: Prolog.
+*  **Procedural**: focus on a sequence of steps to solve a problem. Example: C.
+*  **Object-Oriented**: model entities of outside worlds as objects encapsulating data and behavior. Example: Java, C++.
+*  **Functional**: focus on mathematical functions. Example: Haskell.
+*  **Logical**: express facts and rules for reasoning. Example: Prolog.
 
 Some programming languages fit into several categories, e.g. Python and Javascript support both procedural, object-oriented and functional programming.
 
-## Homework
+## Homework (graded)
 
 *   Install `htop`. Don’t know how? Use Google/ChatGPT.
 *   Make a screenshot.

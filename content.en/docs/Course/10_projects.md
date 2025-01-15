@@ -1,5 +1,5 @@
 ---
-Title: Projects
+Title: 10 Projects
 ---
 # Projects
 
