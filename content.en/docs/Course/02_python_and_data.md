@@ -51,29 +51,8 @@ text = "# This is not a comment because it's inside quotes."
 
 ## Statements and Expressions
 
-* Statement is a command. It does something, but not necessarily return a value.
-* Expression is a combination of values, variables, operators, funtion calls that evaluates to a value.
-
-```
-# Print statement
-print("Hello, World!")
-
-# Control structure (if statement)
-if x > 5:
-    print("x is greater than 5")
-
-# Arithmetic expression
-5 + 3  # Evaluates to 8
-
-# Logical expression
-x > 5  # Evaluates to True or False
-
-# Function call as an expression
-len("Python")  # Evaluates to 6
-
-# String concatenation as an expression
-"Hello" + " World"  # Evaluates to "Hello World"
-```
+* Statement is a command. It does something, but not necessarily return a value. E.g. `print`
+* Expression is a combination of values, variables, operators, function calls that evaluates to a value. E.g. `5`, `2+2`, `pow(3, 2) + (3/4)`
 
 You can execute several statements (expressions) in one line. Don't do that! Stick to one idea/task/expression per line. That way it will be easier to understand.
 
@@ -95,11 +74,10 @@ Hand in hand with data types go operators. An operator is a symbol or keyword in
 * Complex: complex
 
 ```
->>> # Let's start with integers and floats
->>> x = 42  # An integer
->>> y = 3.14  # A float
+>>> x = 42 
+>>> y = 3.14
 
->>> # Check their types
+>>> # Check types
 >>> type(x)
 <class 'int'>
 >>> type(y)
@@ -115,7 +93,7 @@ Hand in hand with data types go operators. An operator is a symbol or keyword in
 >>> x / y  # Division (always returns float)
 13.375796178343949
 
->>> # Floor division and modulus
+>>> # Floor division and modulus (go hand in hand)
 >>> x // 5  # Integer division
 8
 >>> x % 5  # Remainder
@@ -155,6 +133,21 @@ Hand in hand with data types go operators. An operator is a symbol or keyword in
 42
 >>> pow(2, 3)  # 2 raised to the power of 3 (same as 2 ** 3)
 8
+```
+
+For some float numbers computers cannot represent them exactly. Therefore, never compare floats (but use greater-than or lesser-than):
+
+```
+a = 0.1 + 0.2
+b = 0.3
+
+# Direct comparison
+if a == b:
+    print("a and b are equal")
+else:
+    print("a and b are NOT equal")
+
+print(f"a: {a}, b: {b}")
 ```
 
 ## Text
@@ -204,6 +197,7 @@ Hand in hand with data types go operators. An operator is a symbol or keyword in
 'HELLO, ALICE!'
 >>> full_greeting.lower()  # Lowercase
 'hello, alice!'
+>>> # The function as `object.function` is called a `method`. More on methods in the OOP class.
 
 >>> # Stripping whitespace
 >>> padded = "   hello, world!   "
@@ -230,7 +224,8 @@ True
 >>> "boring" in sentence
 False
 
->>> # Replacing parts of a string
+>>> # Replacing parts of a string 
+>>> # does not change existing string but creates a new string!
 >>> sentence.replace("awesome", "fantastic")
 'Python is fantastic'
 
@@ -276,85 +271,7 @@ Please enter a number: 42
 42
 ```
 
-## Boolean
 
-* Boolean: bool
-* Valid values are `True` and `False`. Comparisons yield these values.
-
-```
->>> # Booleans represent True or False
->>> t = True
->>> f = False
-
->>> # Check the type of a boolean
->>> type(t)
-<class 'bool'>
-
->>> # Boolean operations
->>> t and f  # Logical AND
-False
->>> t or f  # Logical OR
-True
->>> not t  # Logical NOT
-False
-
->>> # Booleans with comparison operators
->>> 5 > 3  # Greater than
-True
->>> 5 < 3  # Less than
-False
->>> 5 == 5  # Equal to
-True
->>> 5 != 3  # Not equal to
-True
-
->>> # Combining comparisons
->>> 5 > 3 and 2 < 4
-True
->>> 5 > 3 or 2 > 4
-True
->>> not (5 > 3)
-False
-
->>> # Booleans with arithmetic operations
->>> True + 1  # True is treated as 1
-2
->>> False + 1  # False is treated as 0
-1
-
->>> # Boolean casting 
->>> bool(1)  # Non-zero numbers are True
-True
->>> bool(0)  # Zero is False
-False
->>> bool("Hello")  # Non-empty strings are True
-True
->>> bool("")  # Empty strings are False
-False
->>> bool([])  # Empty lists are False
-False
->>> bool([1, 2, 3])  # Non-empty lists are True
-True
-
->>> age = 19
->>> is_adult = age >= 18    # expression + assignment
->>> is_adult
-True
-```
-
-
-## None
-
-None is a special constant in Python that represents the absence of a value or a null value.
-
-```
->>> x = None
->>> x is None
-True
->>> x is not None
-False
->>>
-```
 
 ## Homework (graded)
 

@@ -6,6 +6,85 @@ Title: 03 Control Strutures and Loops
 
 Conditionals in a programming language are used to make decisions in the flow of a program based on whether certain conditions are met. They allow the program to execute different code paths depending on the evaluation of a condition (True or False).
 
+## `bool` Data Type
+
+Valid values are `True` and `False`. Comparisons yield these values. Used in condition and logical operations.
+
+```
+>>> # Booleans represent True or False
+>>> t = True
+>>> f = False
+
+>>> # Check the type of a boolean
+>>> type(t)
+<class 'bool'>
+
+>>> # Boolean operations
+>>> t and f  # Logical AND (yields True if both operands are True)
+False
+>>> t or f  # Logical OR (yields True if any of the operands is True)
+True
+>>> not t  # Logical NOT
+False
+
+>>> # Booleans with comparison operators
+>>> 5 > 3 
+True
+>>> 5 < 3
+False
+>>> 5 == 5 
+True
+>>> 5 != 3
+True
+
+>>> # Combining comparisons
+>>> 5 > 3 and 2 < 4
+True
+>>> 5 > 3 or 2 > 4
+True
+>>> not (5 > 3)
+False
+
+>>> # Booleans with arithmetic operations
+>>> True + 1  # True is treated as 1
+2
+>>> False + 1  # False is treated as 0
+1
+
+>>> # Boolean casting 
+>>> bool(1)  # Non-zero numbers are True
+True
+>>> bool(0)  # Zero is False
+False
+>>> bool("Hello")  # Non-empty strings are True
+True
+>>> bool("")  # Empty strings are False
+False
+>>> bool([])  # Empty lists are False
+False
+>>> bool([1, 2, 3])  # Non-empty lists are True
+True
+
+>>> age = 19
+>>> is_adult = age >= 18    # expression + assignment
+>>> is_adult
+True
+```
+
+## `None` Data Type
+
+None is a special constant in Python that represents the absence of a value or a null value.
+
+```
+>>> x = None
+>>> x is None
+True
+>>> x is not None
+False
+>>>
+```
+
+
 ## `if` Statement
 The if statement allows executing a block of code if a condition is `True`.
 
@@ -126,6 +205,8 @@ for i in range(1, 3):
 while True:
     print("Infinite Loop")
 ```
+
+Break out of the loop by pressing CTRL-C.
 
 # `pass`
 A placeholder that does nothing but satisfies syntax requirements.

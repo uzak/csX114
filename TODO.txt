@@ -1,0 +1,9 @@
+codewars examples
+project templates in github
+    https://github.com/Vickyabiodun/Hangman-Game
+sanskrit class like file/project structure
+first homework
+    install ubuntu
+    learn unix basics
+
+https://www.youtube.com/watch?v=cNN_tTXABUA

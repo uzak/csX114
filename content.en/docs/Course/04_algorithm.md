@@ -42,11 +42,11 @@ Step 4: If the road is clear, cross; otherwise, wait.
 
 ## Key Features of an Algorithm:
 
-* Input: The algorithm accepts zero or more inputs to work with.
-* Output: The algorithm produces one (or multiple) result or outcome.
-* Definiteness: Each step must be clearly defined without ambiguity.
-* Finiteness: The algorithm must terminate after a finite number of steps.
-* Effectiveness: Each step of the algorithm can be performed in a finite amount of time using available resources.
+* **Input**: The algorithm accepts zero or more inputs to work with.
+* **Output**: The algorithm produces one (or multiple) result or outcome (procedures produce no result).
+* **Definiteness**: Each step must be clearly defined without ambiguity.
+* **Finiteness**: The algorithm must terminate after a finite number of steps.
+* **Effectiveness**: Each step of the algorithm can be performed in a finite amount of time using available resources.
 
 KISS (Keep It Simple Stupid)
 
@@ -83,3 +83,5 @@ Input: list of numbers
 ## Homework (graded)
 
 Given a string. Return two numbers (tuple), the first will represent the number of spaces in the string, the other of non-spaces. Your task is pass the M. and S. steps on paper and only then to implement the algorithm in Python. Both the paper and the script are required.
+
+Use `for` loop to iterate over the string, you're not allowed to use `len` function and `string.count` method.

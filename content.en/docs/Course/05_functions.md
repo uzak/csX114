@@ -10,6 +10,8 @@ Functions are reusable blocks of code that perform a specific task. They impleme
 
 Function reduce complexity, as the user (caller) of a function doesn't need to know the algorithm, only what's the input and expected output. Thus, from the perspective of the caller of the function it is a blackbox.
 
+Functions are one of the most importants concepts in programming.
+
 A function in Python is defined using the `def` keyword:
 
 ```

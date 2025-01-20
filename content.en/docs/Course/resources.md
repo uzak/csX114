@@ -11,3 +11,7 @@ Title: Resources
 * [Python String Formatting Documentation](https://pyformat.info/)
 
 * [Codewars](https://www.codewars.com/) - practice makes perfect
+
+---
+
+* [Attendance and Grading Spring 2025](https://docs.google.com/spreadsheets/d/1P2QirhsRfRDojosWzls60fnAkzgJOZal-TX1UpIPWOA/edit?usp=sharing)

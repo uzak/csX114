@@ -172,6 +172,8 @@ Some programming languages fit into several categories, e.g. Python and Javascri
 
 ## Homework (graded)
 
+### htop 
+
 *   Install `htop`. Don’t know how? Use Google/ChatGPT.
 *   Make a screenshot.
 *   Identify any process and explain what its values mean.
